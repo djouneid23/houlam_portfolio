@@ -28,19 +28,34 @@ export default function Profile() {
             </p>
 
             <p className="text-slate-400 leading-relaxed mb-6">
-              Actuellement en Double Master en Génie Logiciel et Cybersécurité spécialisée en Intelligence Artificielle.
-              Certifié CompTIA Security+ et CCNA 1,2,3, CompTIA server et en pentest et audit de sécurité par GSIMEL. Spécialisé dans la conception
-              d’architectures sécurisées, l’intégration de mécanismes de détection
-              intelligents et l’automatisation avancée des systèmes de défense.
+              Actuellement en Master en Génie Logiciel spécialisé en Systèmes d&apos;information et bases de données et en parallele je fais un Master
+              en cybersécurité & Inteligence Artificiel. 
+            </p>
+            <p className="text-slate-400 leading-relaxed mb-6">
+                Je conçois et sécurise des architectures SI robustes, évolutives et intelligentes.
+
             </p>
 
             <div className="space-y-3 text-slate-300">
-              <p><span className="text-cyan-400">Localisation :</span> Comores / Madagascar</p>
-              <p><span className="text-cyan-400">Spécialité :</span> Security by Design & IA appliquée</p>
-              <p><span className="text-cyan-400">Certification :</span> Security+ • server+ •  CCNA123 • ADN • </p>
-              <p><span className="text-cyan-400">Startup :</span> Fondateur de CyberKom et NovaKom</p>
+              Mon expertise combine :
+              <p><span className="text-cyan-400">Conception et optimisation des bases de données</span></p>
+              <p><span className="text-cyan-400">Architectures des systèmes d&apos;information sécurisés</span></p>
+              <p><span className="text-cyan-400">Sécurité offensive et défensive</span></p>
+              <p><span className="text-cyan-400">Inteligence artificielle appliquée à la cybersécurité</span></p>
+              <p><span className="text-cyan-400">Automatisation</span></p>
             </div>
 
+            <div className="space-y-3 text-slate-300">
+              <p></p>
+              <p><span className="text-cyan-400">Localisation :</span> Comores / Madagascar</p>
+              <p><span className="text-cyan-400">Spécialité :</span> Information Systems & AI-Driven Cyber</p>
+              <p><span className="text-cyan-400">Certification :</span> Security+ • server+ •  CCNA123 • ADN • chez GSIMEL</p>
+              <p><span className="text-cyan-400">Startup :</span> Fondateur de CyberKom et NovaKom</p>
+            </div>
+            <p className="text-slate-400 leading-relaxed mb-6">
+                Mon objectif est de dévélopper des infrastructures numériques sécurisées et inteligentes adaptées aux entreprises et administrations 
+
+            </p>
             <div className="mt-8 flex gap-4">
               <a
                 href="/api/download-cv"

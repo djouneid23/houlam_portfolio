@@ -7,16 +7,28 @@ export default function Skills() {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              title: "Cybersécurité",
-              items: ["SIEM (Wazuh)", "IDS/IPS", "Pentest", "Hardening Linux"]
+              title: "Architecture & SI",
+              items: ["Conception UML/MERISE", "Architectures multi-tiers", "Microservices", "Urbanisation du SI", "Analyse des besoins métier", "Audit & gouvernance du SI"]
             },
             {
-              title: "Génie Logiciel",
-              items: ["Next.js", "Node.js", "REST API", "RBAC"]
+              title: "Bases de données",
+              items: ["Conception des bases de données", "SQL avancé", "Optimisation et indexation", "Sécurisation BDO", "Backup & Disaster Recovery", "Bases NoSQL", "Administration de bases de données"]
             },
             {
-              title: "IA & Automatisation",
-              items: ["Python", "Anomaly Detection", "Automation", "Data Analysis"]
+              title: "Cybersécurtié",
+              items: ["Analyse de vulnérabilité", "Tests d'intrusion (Web & réseau)", "Surveillance et détéction d'intrusion", "Journalisation & audit", "Sécurité de base de données", "Gestion des incidents", "Sécurité Web", "Sécurité Réseau", " Hardening serveurs Linux"]
+            },
+            {
+              title: "IA & Data",
+              items: ["Machine Learning", "Détection d'anomalies", "Classification d'attaques", "Analyse comportementale", "Python"]
+            },
+            {
+              title: "Système & virtualisation",
+              items: ["Linux server", "Windows server", "Proxmox", "Docker", "Git"]
+            },
+            {
+              title: "Automatisation & Langage",
+              items: ["Script bash", "Python", "Langage C", "Ansible", "Javascrit (NodeJS ExpressJS, ReactJS, NextJS)", "PHP Laravel", "Dart Flutter"]
             }
           ].map((category, index) => (
             <div key={index} className="bg-slate-900 p-8 rounded-2xl shadow-xl">
