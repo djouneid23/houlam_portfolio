@@ -10,7 +10,7 @@ export default function About() {
         <div className="space-y-3 text-slate-300">
               Mon approche repose sur trois piliers
               <p><span className="text-cyan-400">Conception de system d&apos;information performants</span></p>
-              <p><span className="text-cyan-400">Sécurisations avacés des infrastructures numérique</span></p>
+              <p><span className="text-cyan-400">Sécurisations avancés des infrastructures numérique</span></p>
               <p><span className="text-cyan-400">Inteligence artificielle appliquée à la détection et à l&apos;analyse des menaces</span></p>
         </div>
         <p className="text-slate-400 leading-relaxed">
