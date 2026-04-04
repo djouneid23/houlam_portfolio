@@ -56,8 +56,8 @@ const parcours = [
 
 export default function Parcours() {
   return (
-    <section id="parcours" className="py-24 px-6 bg-slate-950">
-      <div className="max-w-5xl mx-auto">
+    <section id="parcour" className="py-24 px-6 bg-slate-950">
+      <div className="max-w-5xl mx-auto" >
 
         <motion.h2
           initial={{ opacity: 0, y: 40 }}

@@ -14,6 +14,7 @@ export default function Navbar() {
         {/* Desktop menu */}
         <div className="space-x-6 hidden md:flex">
           <a href="#about" className="hover:text-cyan-400">À propos</a>
+          <a href="#parcour" className="hover:text-cyan-400">Parcour</a>
           <a href="#skills" className="hover:text-cyan-400">Compétences</a>
           <a href="#projects" className="hover:text-cyan-400">Projets</a>
           <Link href="/profile">Profile</Link>
@@ -46,6 +47,7 @@ export default function Navbar() {
         <div className="md:hidden bg-slate-950 border-t border-slate-800">
           <div className="flex flex-col px-6 py-4 space-y-4">
             <a onClick={() => setOpen(false)} href="#about" className="hover:text-cyan-400">À propos</a>
+            <a onClick={() => setOpen(false)} href="#parcour" className="hover:text-cyan-400">Parcour</a>
             <a onClick={() => setOpen(false)} href="#skills" className="hover:text-cyan-400">Compétences</a>
             <a onClick={() => setOpen(false)} href="#projects" className="hover:text-cyan-400">Projets</a>
             <Link onClick={() => setOpen(false)} href="/profile">Profile</Link>
