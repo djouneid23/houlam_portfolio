@@ -1,7 +1,7 @@
 // =============================
 "use client";
 
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -33,6 +33,15 @@ export default function Footer() {
           aria-label="GitHub"
         >
           <FaGithub size={20} />
+        </a>
+         <a
+          href="https://wa.me/2693835276"  // Remplace par ton numéro avec code pays
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-cyan-500 transition-colors"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp size={20} />
         </a>
       </div>
 
