@@ -44,10 +44,10 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
             <a
-              href="#projects"
+              href="/api/download-cv"
               className="bg-cyan-500 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
             >
-              Voir mes projets
+              Télécharger CV
             </a>
 
             <a

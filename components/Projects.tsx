@@ -37,6 +37,10 @@ export default function Projects() {
             {
               title : "Lab Réseau",
               desc: "Création d'un Lab réseau qui permet de relier plusieur site ou entreprise sous GNS3 en utilisant fortigate(VPN Hub-and-Spock) "
+            },
+            {
+              title : "Conception d'une application web de ressource humaine",
+              desc: "Conception d'une application web de ressource humaine avec comme technologie React, Laravel et MySQL "
             }
           ].map((project, index) => (
             <div key={index} className="bg-slate-800 p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform">
