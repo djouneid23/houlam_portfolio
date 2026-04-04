@@ -35,7 +35,7 @@ export default function Footer() {
           <FaGithub size={20} />
         </a>
          <a
-          href="{`https://wa.me/${whatsappNumber}`}"  // Remplace par ton numéro avec code pays
+          href="https://wa.me/2693835276"  // Remplace par ton numéro avec code pays
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-500 transition-colors"
