@@ -32,7 +32,7 @@ export default function Projects() {
             },
             {
               title: "Agent IA",
-              desc: "Création d'un agent IA en react et nodejs et l'API opnrouter qui permet de discuter avec et lui poser des questions il traite seulement les texts mais pas les fichiers"
+              desc: "Création d'un agent IA en react et nodejs et l'API openrouter qui permet de discuter avec et lui poser des questions il traite seulement les texts mais pas les fichiers"
             },
             {
               title : "Lab Réseau",

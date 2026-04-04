@@ -24,7 +24,7 @@ export default function Profile() {
           <div>
             <h3 className="text-4xl font-bold mb-4">Djouneid Mohamed</h3>
             <p className="text-cyan-400 text-lg font-semibold mb-6">
-              Ingénieur Génie Logiciel • Cybersécurité • IA
+              Security Engineer | Pentester | AI-Driven Cybersecurity 
             </p>
 
             <p className="text-slate-400 leading-relaxed mb-6">
