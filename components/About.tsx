@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-5xl mx-auto px-6">
         <h3 className="text-3xl font-bold mb-8">À propos</h3>
         <p className="text-slate-400 leading-relaxed">
-          Ingénieur orineté architecture des systèmes d&apos;information, sécurité avancée et intellignece artificielle, je combine une expertise 
+          Ingénieur orienté architecture des systèmes d&apos;information, sécurité avancée et intellignece artificielle, je combine une expertise 
           en Génie Logiciel et Cybersécurité avec intelligence Artificiel.
         </p>
         <div className="space-y-3 text-slate-300">
