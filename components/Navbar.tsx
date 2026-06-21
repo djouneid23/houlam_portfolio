@@ -3,55 +3,68 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const links = [
+  { href: "#about", label: "À propos" },
+  { href: "#parcour", label: "Parcours" },
+  { href: "#skills", label: "Compétences" },
+  { href: "#projects", label: "Projets" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">Djouneid Mohamed</h1>
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-xl">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" className="font-bold text-white">
+          Djouneid Mohamed
+        </a>
 
-        {/* Desktop menu */}
-        <div className="space-x-6 hidden md:flex">
-          <a href="#about" className="hover:text-cyan-400">À propos</a>
-          <a href="#parcour" className="hover:text-cyan-400">Parcour</a>
-          <a href="#skills" className="hover:text-cyan-400">Compétences</a>
-          <a href="#projects" className="hover:text-cyan-400">Projets</a>
-          <Link href="/profile">Profile</Link>
-          <a href="#contact" className="hover:text-cyan-400">Contact</a>
+        <div className="hidden md:flex items-center gap-7 text-sm text-slate-300">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className="transition hover:text-emerald-300">
+              {link.label}
+            </a>
+          ))}
+          <Link href="/profile" className="transition hover:text-emerald-300">
+            Profil
+          </Link>
         </div>
 
-        {/* Mobile button */}
         <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
+          type="button"
+          className="md:hidden rounded-lg border border-slate-800 p-2 text-slate-200"
+          onClick={() => setOpen((value) => !value)}
+          aria-label="Ouvrir le menu"
+          aria-expanded={open}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          <span className="block h-0.5 w-5 bg-current" />
+          <span className="mt-1.5 block h-0.5 w-5 bg-current" />
+          <span className="mt-1.5 block h-0.5 w-5 bg-current" />
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-slate-950 border-t border-slate-800">
-          <div className="flex flex-col px-6 py-4 space-y-4">
-            <a onClick={() => setOpen(false)} href="#about" className="hover:text-cyan-400">À propos</a>
-            <a onClick={() => setOpen(false)} href="#parcour" className="hover:text-cyan-400">Parcour</a>
-            <a onClick={() => setOpen(false)} href="#skills" className="hover:text-cyan-400">Compétences</a>
-            <a onClick={() => setOpen(false)} href="#projects" className="hover:text-cyan-400">Projets</a>
-            <Link onClick={() => setOpen(false)} href="/profile">Profile</Link>
-            <a onClick={() => setOpen(false)} href="#contact" className="hover:text-cyan-400">Contact</a>
+        <div className="md:hidden border-t border-slate-800 bg-slate-950">
+          <div className="max-w-6xl mx-auto flex flex-col gap-4 px-6 py-5 text-slate-300">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                onClick={() => setOpen(false)}
+                href={link.href}
+                className="transition hover:text-emerald-300"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Link
+              onClick={() => setOpen(false)}
+              href="/profile"
+              className="transition hover:text-emerald-300"
+            >
+              Profil
+            </Link>
           </div>
         </div>
       )}

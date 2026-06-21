@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import "./globals.css";
-export const metadata = {
-  title: "Houlam | Ingénieur Cybersécurité & IA",
-  description: "Portfolio professionnel - Génie Logiciel & Cybersécurité spécialisée IA"
+
+export const metadata: Metadata = {
+  title: "Djouneid Mohamed | Ingénieur Cybersécurité & IA",
+  description:
+    "Portfolio professionnel de Djouneid Mohamed : génie logiciel, cybersécurité, pentest, SOC, infrastructure et IA appliquée.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

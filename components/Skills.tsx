@@ -1,44 +1,116 @@
-// =============================
+"use client";
+
+import { motion } from "framer-motion";
+
+const categories = [
+  {
+    title: "Cybersécurité",
+    items: [
+      "Tests d’intrusion web & réseau",
+      "Analyse de vulnérabilités",
+      "Audit et recommandations",
+      "Surveillance IDS/IPS",
+      "Gestion des incidents",
+      "Hardening Linux",
+    ],
+  },
+  {
+    title: "SOC, réseau & infrastructure",
+    items: [
+      "Wazuh, Suricata, SIEM",
+      "Proxmox et virtualisation",
+      "VPN, segmentation réseau",
+      "GNS3, Fortigate",
+      "Linux Server, Windows Server",
+      "Docker et Git",
+    ],
+  },
+  {
+    title: "Génie logiciel & SI",
+    items: [
+      "UML, MERISE",
+      "Architecture multi-tiers",
+      "Applications web et mobile",
+      "React, Next.js, Node.js",
+      "Laravel, PHP, Flutter",
+      "Analyse des besoins métier",
+    ],
+  },
+  {
+    title: "Bases de données",
+    items: [
+      "Conception relationnelle",
+      "SQL avancé",
+      "Optimisation et indexation",
+      "Sécurisation des données",
+      "Sauvegarde et reprise",
+      "Administration BDD",
+    ],
+  },
+  {
+    title: "IA & data",
+    items: [
+      "Machine learning",
+      "Détection d’anomalies",
+      "Classification d’attaques",
+      "Analyse comportementale",
+      "Réduction des faux positifs",
+      "Python",
+    ],
+  },
+  {
+    title: "Automatisation",
+    items: [
+      "Scripts Bash",
+      "Python",
+      "Ansible",
+      "API et intégrations",
+      "Node.js / Express",
+      "Workflows techniques",
+    ],
+  },
+];
+
 export default function Skills() {
   return (
     <section id="skills" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <h3 className="text-3xl font-bold mb-12 text-center">Compétences</h3>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Architecture & SI",
-              items: ["Conception UML/MERISE", "Architectures multi-tiers", "Microservices", "Urbanisation du SI", "Analyse des besoins métier", "Audit & gouvernance du SI"]
-            },
-            {
-              title: "Bases de données",
-              items: ["Conception des bases de données", "SQL avancé", "Optimisation et indexation", "Sécurisation BDO", "Backup & Disaster Recovery", "Bases NoSQL", "Administration de bases de données"]
-            },
-            {
-              title: "Cybersécurtié",
-              items: ["Analyse de vulnérabilité", "Tests d'intrusion (Web & réseau)", "Surveillance et détéction d'intrusion", "Journalisation & audit", "Sécurité de base de données", "Gestion des incidents", "Sécurité Web", "Sécurité Réseau", " Hardening serveurs Linux"]
-            },
-            {
-              title: "IA & Data",
-              items: ["Machine Learning", "Détection d'anomalies", "Classification d'attaques", "Analyse comportementale", "Python"]
-            },
-            {
-              title: "Système & virtualisation",
-              items: ["Linux server", "Windows server", "Proxmox", "Docker", "Git"]
-            },
-            {
-              title: "Automatisation & Langage",
-              items: ["Script bash", "Python", "Langage C", "Ansible", "Javascrit (NodeJS ExpressJS, ReactJS, NextJS)", "PHP Laravel", "Dart Flutter"]
-            }
-          ].map((category, index) => (
-            <div key={index} className="bg-slate-900 p-8 rounded-2xl shadow-xl">
-              <h4 className="text-xl font-semibold mb-4 text-cyan-400">{category.title}</h4>
-              <ul className="space-y-2 text-slate-400">
-                {category.items.map((item, i) => (
-                  <li key={i}>{item}</li>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">
+            Compétences
+          </p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold">
+            Des compétences orientées terrain et réalisation.
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              whileHover={{ y: -6 }}
+              className="group rounded-xl border border-slate-800 bg-slate-900/90 p-6 shadow-xl shadow-slate-950/20 transition-colors hover:border-emerald-400/50"
+            >
+              <h3 className="text-xl font-semibold text-emerald-300">{category.title}</h3>
+              <ul className="mt-5 space-y-3 text-sm text-slate-300">
+                {category.items.map((skill) => (
+                  <li key={skill} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300 transition group-hover:scale-125" />
+                    <span>{skill}</span>
+                  </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
